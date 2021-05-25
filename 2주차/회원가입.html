@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/165cf95758.js" crossorigin="anonymous"></script>
+    <title>회원가입</title>
+    <style>
+        @font-face {
+            font-family: 'Cafe24Oneprettynight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            background-color: #ffdec7;
+            font-family: 'Cafe24Oneprettynight';
+        }
+
+        .join{
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            width: 450px;
+            height: 100%;
+            background-color: #ffffff;
+            border-radius: 20px;
+        }
+
+        .join__top-text{
+            text-align: center;
+        }
+
+        .join__top-text__text1{
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .join__top-text__text2{
+            color: #585858;
+            margin-top: 5px;
+            margin-bottom: 35px;
+        }
+
+        form{
+            width:350px;
+        }
+
+        input[type="text"], input[type="password"] { 
+            height: 30px; 
+            padding: 5px;
+            border: 1px solid #8d8d8d;
+            color: #585858;
+            border-radius: 10px;
+        }
+
+        input[type="checkbox"]{
+            margin: 0px;
+        }
+
+        .join__user-img{
+            text-align: center;
+        }
+
+        .join__user-img__img{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            font-size: 95px;
+            background-color: #ffffff;
+            color: #ffcda9;
+            border: 1px solid #a1a1a1;
+            margin-bottom: 0px;
+        }
+
+        .join__common-text{
+            font-size:17px;
+            color: #585858;
+            margin-bottom: 5px;
+        }
+
+        .join__user-name__input, 
+        .join__user-id__input,
+        .join__user-password__input,
+        .join__user-phone__input{
+            width: 340px;
+        }
+
+        .join__user-password__notice,
+        .join__user-birth__notice,
+        .join__sns-notice{
+            font-size: 12px;
+            text-align: center;
+            margin: 2px 0px 0px 0px;
+            color: #b9b9b9;
+        }
+
+        .join__user-birth-sex__input__date{
+            width: 200px;
+        }
+
+        .join__user-birth-sex__input__sex{
+            height: 42px;
+            background-color: #ffffff;
+            width: 63px;
+            border-radius: 5px;
+            border: 1px solid #8d8d8d;
+            font-family: 'Cafe24Oneprettynight';
+            font-size: 16px;
+        }
+
+        .join__user-birth__notice{
+            width: 200px;
+        }
+
+        .join__user-path__text{
+            font-size: 20px;
+            color: #1f1f1f;
+        }
+
+        .join__user-email{
+            width: 350px;
+        }
+
+        .join__user-email__left{
+            width: 190px;
+        }
+
+        .join__user-email__right{
+            height: 42px;
+            border-radius: 10px;
+            border: 1px solid #8d8d8d;
+        }
+
+        .join__user-path__common{
+            margin-right: 7px;
+        }
+
+        .join__user-path{
+            margin-bottom: 50px;
+        }
+
+        .join__join-btns__join,
+        .join__join-btns__reset{
+            font-family: 'Cafe24Oneprettynight';
+            font-size: 18px;
+            width: 170px;
+            height: 42px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .join__join-btns__join{
+            border:none;
+            background-color: #ffdec7;
+        }
+
+        .join__join-btns__reset{
+            background-color: #ffffff;
+            border: 2px solid #ffdec7;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "join">
+        <div class = "join__top-text">
+            <p class = join__top-text__text1>회원가입</p>
+            <p class = join__top-text__text2>회원가입을 하시면 해당 앱을 이용하실 수 있습니다.</p>
+        </div>
+        <form>
+            <div class = "join__user-img">
+                <button class = "join__user-img__img">
+                    <i class="fa fa-user"></i>
+                </button>
+            </div>
+            <div class = "join__user-name">
+                <p class = "join__common-text">이름</p>
+                <input type="text" class = "join__user-name__input" placeholder="name">
+            </div>
+            <div class = "join__user-id">
+                <p class="join__common-text">아이디</p>
+                <input type="text" class = "join__user-id__input" placeholder="id">
+            </div>
+            <div class="join__user-password">
+                <p class="join__common-text">비밀번호</p>
+                <input type="password" class="join__user-password__input" placeholder="password">
+                <p class="join__user-password__notice">영어 대소문자/숫자/특수문자를 혼용하여 8자 이상</p>
+            </div>
+            <div class="join__user-birth-sex">
+                <p class="join__common-text">생년월일 및 성별</p>
+                <div class="join__user-birth-sex__input">
+                    <input type="text" class="join__user-birth-sex__input__date" placeholder="birth">
+                    <input type="button" value="남" class="join__user-birth-sex__input__sex">
+                    <input type="button" value="여" class="join__user-birth-sex__input__sex">
+                </div>
+                <p class="join__user-birth__notice">생년월일 8자</p>
+            </div>
+            <div class="join__user-email">
+                <p class="join__common-text">이메일</p>
+                <input type="text" class="join__user-email__left" placeholder="email">
+                <span class="join__common-text">@</span>
+                <select name="email-domain" class="join__user-email__right">
+                    <option value="">선택</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="kookmin.ac.kr">kookmin.ac.kr</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                    <option value="직접 입력">직접 입력</option>
+                </select>
+                <div class="join__sns-notice">
+                    <input type="checkbox" class="email-check">
+                    sns 수신 허용
+                </div>
+            </div>
+            <div class="join__user-phone">
+                <p class="join__common-text">전화번호</p>
+                <input type="text" class="join__user-phone__input" placeholder="phone number">
+                <div class="join__sns-notice">
+                    <input type="checkbox" class="email-check">
+                    sns 수신 허용
+                </div>
+            </div>
+            <div class="join__user-path">
+                <p class="join__common-text">가입경로</p>
+                <label>
+                    <span class="join__user-path__text">SNS</span>
+                    <input type="radio" class="join__user-path__common" name="join">
+                    <span class="join__user-path__text">지인 추천</span>
+                    <input type="radio" class="join__user-path__common" name="join">
+                    <span class="join__user-path__text">인터넷 검색</span>
+                    <input type="radio" class="join__user-path__common" name="join">
+                    <span class="join__user-path__text">기타</span>
+                    <input type="radio" class="join__user-path__common" name="join">
+                </label>
+            </div>
+            <div class="join__join-btns">
+                <input type="button" class="join__join-btns__join" value="회원가입">
+                <input type="reset" class="join__join-btns__reset" value="다시 입력">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

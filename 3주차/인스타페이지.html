@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인스타페이지</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+        body{
+            -ms-user-select: none; 
+            -moz-user-select: -moz-none; 
+            -webkit-user-select: none; 
+            -khtml-user-select: none; 
+            user-select:none;
+            background-color: rgb(110, 110, 110);
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            font-family: 'Istok Web', sans-serif;
+        }
+        #insta{
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            height: 1200px;
+            background-color: white;
+            border-radius: 30px;
+        }
+        #insta__top{
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            position: fixed;
+            background-color: white;
+            width: 600px;
+            padding-top: 40px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgb(212, 212, 212);
+        }
+        #insta__top__obj{
+            display: flex;
+            align-items:center;
+        }
+        #insta__top__obj__logofont{
+            width: 190px;
+            height: 60px;
+            margin-left: 20px;
+            margin-right: 165px;
+        }
+        #insta__top__obj__menus{
+            float: right;
+        }
+        #insta__top__obj__menus img{
+            margin-left: 30px;
+            width: 35px; height: 35px;
+        }
+
+
+        #insta__middle{
+            margin-top: 110px;
+        }
+        #insta__middle__profile{
+            display: flex;
+            align-items: center;
+        }
+        #insta__middle__profile__img{
+            width: 50px; height: 50px;
+            margin: 15px;
+            border-radius: 50%;
+        }
+        #insta__middle__profile__name{
+            font-size: 21px;
+            font-weight: bold;
+            width: 400px;
+            margin-right: 70px;
+        }
+        #insta__middle__profile__add{
+            width: 30px; height: 30px;
+        }
+
+        #insta__middle__postimg{
+            width: 600px;
+            height: 600px;
+        }
+
+
+        #insta__middle__contents__menus{
+            display: flex;
+            align-items: center;
+            margin: 18px 0px;
+        }
+        #insta__middle__contents__menus__like,
+        #insta__middle__contents__menus__comment,
+        #insta__middle__contents__menus__addstory{
+            width: 35px; height: 35px;
+            margin-right: 25px;
+        }
+        #insta__middle__contents__menus__bookmark{
+            width: 35px; height: 35px;
+            margin-left: 355px;
+        }
+
+
+        #insta__middle__contents{
+            margin-left: 15px;
+        }
+        #insta__middle__contents__likes{
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+        }
+        #insta__middle__contents__likes img{
+            border-radius: 50%;
+            width: 25px; height: 25px;
+            margin-right: 13px;
+        }
+        #insta__middle__contents__likes span{
+            font-size: 21px;
+        }
+
+        #insta__middle__contents__maintxt,
+        #insta__middle__contents__comment span{
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+        #insta__middle__contents__comment p{
+            margin: 0px 0px 8px 0px;
+            font-size: 21px;
+            color: rgb(143, 143, 143);
+        }
+        #insta__middle__contents__comment img{
+            width: 15px; height: 15px;
+            margin-left: 110px;
+        }
+
+
+        #insta__middle__contents__day{
+            margin: 10px 0px 0px 0px;
+            color: rgb(143, 143, 143);
+            font-size: 18px;
+        }
+        
+
+        #insta__bottom{
+            position: fixed; 
+            bottom: 0; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 530px;
+            background-color: white;
+            padding: 15px 35px 30px 35px ;
+            border-top: 1px solid rgb(212, 212, 212);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        #insta__bottom img{
+            width: 40px; height: 40px;
+        }
+        #insta__bottom__user{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="insta">
+        <div id="insta__top">
+            <div id="insta__top__obj">
+                <img src="insta_font.png" alt=""id="insta__top__obj__logofont">
+                <div id="insta__top__obj__menus">
+                   <img id="insta__top__obj__menus__posting" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzcuODY3IDQ3Ny44Njc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMzkyLjUzMywwaC0zMDcuMkMzOC4yMjgsMC4wNTYsMC4wNTYsMzguMjI4LDAsODUuMzMzdjMwNy4yYzAuMDU2LDQ3LjEwNSwzOC4yMjgsODUuMjc3LDg1LjMzMyw4NS4zMzNoMzA3LjINCgkJCWM0Ny4xMDUtMC4wNTYsODUuMjc3LTM4LjIyOCw4NS4zMzMtODUuMzMzdi0zMDcuMkM0NzcuODEsMzguMjI4LDQzOS42MzgsMC4wNTYsMzkyLjUzMywweiBNNDQzLjczMywzOTIuNTMzDQoJCQljMCwyOC4yNzctMjIuOTIzLDUxLjItNTEuMiw1MS4yaC0zMDcuMmMtMjguMjc3LDAtNTEuMi0yMi45MjMtNTEuMi01MS4ydi0zMDcuMmMwLTI4LjI3NywyMi45MjMtNTEuMiw1MS4yLTUxLjJoMzA3LjINCgkJCWMyOC4yNzcsMCw1MS4yLDIyLjkyMyw1MS4yLDUxLjJWMzkyLjUzM3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggZD0iTTMyNC4yNjcsMjIxLjg2N0gyNTZWMTUzLjZjMC05LjQyNi03LjY0MS0xNy4wNjctMTcuMDY3LTE3LjA2N3MtMTcuMDY3LDcuNjQxLTE3LjA2NywxNy4wNjd2NjguMjY3SDE1My42DQoJCQljLTkuNDI2LDAtMTcuMDY3LDcuNjQxLTE3LjA2NywxNy4wNjdTMTQ0LjE3NCwyNTYsMTUzLjYsMjU2aDY4LjI2N3Y2OC4yNjdjMCw5LjQyNiw3LjY0MSwxNy4wNjcsMTcuMDY3LDE3LjA2Nw0KCQkJUzI1NiwzMzMuNjkyLDI1NiwzMjQuMjY3VjI1Nmg2OC4yNjdjOS40MjYsMCwxNy4wNjctNy42NDEsMTcuMDY3LTE3LjA2N1MzMzMuNjkyLDIyMS44NjcsMzI0LjI2NywyMjEuODY3eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+                    <img id="insta__top__obj__menus__act" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDc3LjUzNCA0NzcuNTM0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzcuNTM0IDQ3Ny41MzQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNDM4LjQ4Miw1OC42MWMtMjQuNy0yNi41NDktNTkuMzExLTQxLjY1NS05NS41NzMtNDEuNzExYy0zNi4yOTEsMC4wNDItNzAuOTM4LDE1LjE0LTk1LjY3Niw0MS42OTRsLTguNDMxLDguOTA5DQoJCQlsLTguNDMxLTguOTA5QzE4MS4yODQsNS43NjIsOTguNjYyLDIuNzI4LDQ1LjgzMiw1MS44MTVjLTIuMzQxLDIuMTc2LTQuNjAyLDQuNDM2LTYuNzc4LDYuNzc4DQoJCQljLTUyLjA3Miw1Ni4xNjYtNTIuMDcyLDE0Mi45NjgsMCwxOTkuMTM0bDE4Ny4zNTgsMTk3LjU4MWM2LjQ4Miw2Ljg0MywxNy4yODQsNy4xMzYsMjQuMTI3LDAuNjU0DQoJCQljMC4yMjQtMC4yMTIsMC40NDItMC40MywwLjY1NC0wLjY1NGwxODcuMjktMTk3LjU4MUM0OTAuNTUxLDIwMS41NjcsNDkwLjU1MSwxMTQuNzcsNDM4LjQ4Miw1OC42MXogTTQxMy43ODcsMjM0LjIyNmgtMC4wMTcNCgkJCUwyMzguODAyLDQxOC43NjhMNjMuODE4LDIzNC4yMjZjLTM5Ljc4LTQyLjkxNi0zOS43OC0xMDkuMjMzLDAtMTUyLjE0OWMzNi4xMjUtMzkuMTU0LDk3LjE1Mi00MS42MDksMTM2LjMwNi01LjQ4NA0KCQkJYzEuOTAxLDEuNzU0LDMuNzMsMy41ODMsNS40ODQsNS40ODRsMjAuODA0LDIxLjk0OGM2Ljg1Niw2LjgxMiwxNy45MjUsNi44MTIsMjQuNzgxLDBsMjAuODA0LTIxLjkzMQ0KCQkJYzM2LjEyNS0zOS4xNTQsOTcuMTUyLTQxLjYwOSwxMzYuMzA2LTUuNDg0YzEuOTAxLDEuNzU0LDMuNzMsMy41ODMsNS40ODQsNS40ODRDNDUzLjkxMywxMjUuMDc4LDQ1NC4yMDcsMTkxLjUxNiw0MTMuNzg3LDIzNC4yMjYNCgkJCXoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+                    <img id="insta__top__obj__menus__chating" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNTA3LjYwOCw0LjM5NWMtNC4yNDMtNC4yNDQtMTAuNjA5LTUuNTQ5LTE2LjE3Ny0zLjMyMUw5LjQzLDE5My44NzJjLTUuNTE1LDIuMjA2LTkuMjA4LDcuNDU4LTkuNDIsMTMuMzk1DQoJCQljLTAuMjExLDUuOTM2LDMuMTAxLDExLjQzNyw4LjQ0NSwxNC4wMjlsMTkwLjA2OCw5Mi4xODFsOTIuMTgyLDE5MC4wNjhjMi41MTQsNS4xODQsNy43NjQsOC40NTUsMTMuNDkzLDguNDU1DQoJCQljMC4xNzgsMCwwLjM1Ny0wLjAwMywwLjUzNi0wLjAxYzUuOTM1LTAuMjExLDExLjE4OS0zLjkwNCwxMy4zOTQtOS40MTlsMTkyLjgtNDgxLjk5OA0KCQkJQzUxMy4xNTYsMTUuMDAxLDUxMS44NTEsOC42MzgsNTA3LjYwOCw0LjM5NXogTTUyLjA5NCwyMDkuMTE4TDQzNC43Miw1Ni4wNjlMMjA2LjY5MSwyODQuMDk2TDUyLjA5NCwyMDkuMTE4eiBNMzAyLjg4Myw0NTkuOTA3DQoJCQlsLTc0Ljk3OS0xNTQuNTk5bDIyOC4wMy0yMjguMDI3TDMwMi44ODMsNDU5LjkwN3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+                </div>
+            </div>
+        </div>
+        <div id="insta__middle">
+            <div id="insta__middle__profile">
+                <img id="insta__middle__profile__img" src="insta_profile.jpg" alt="">
+                <span id="insta__middle__profile__name">hongs__0430</span>
+                <img id="insta__middle__profile__add" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxjaXJjbGUgY3g9IjY0IiBjeT0iMjU2IiByPSI2NCIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjY0Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxjaXJjbGUgY3g9IjQ0OCIgY3k9IjI1NiIgcj0iNjQiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+            </div>
+            <img src="hongsarang.jpg" alt="" id="insta__middle__postimg">
+            <div id="insta__middle__contents">
+                <div id="insta__middle__contents__menus">
+                    <img id="insta__middle__contents__menus__like" src="data:image/svg+xml;base64,PHN2ZyBpZD0iY29sb3IiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xMS40NjYgMjIuNzc2Yy4xNDEuMTQ0LjMzMy4yMjQuNTM0LjIyNHMuMzkzLS4wOC41MzQtLjIyNGw5LjU5NC05LjcyMWM0LjAwMS00LjA1MyAxLjE1OC0xMS4wNTUtNC41MzItMTEuMDU1LTMuNDE3IDAtNC45ODUgMi41MTEtNS41OTYgMi45OC0uNjE0LS40NzEtMi4xNzItMi45OC01LjU5Ni0yLjk4LTUuNjcyIDAtOC41NSA2Ljk4NC00LjUzMSAxMS4wNTV6IiBmaWxsPSIjZjQ0MzM2Ii8+PC9zdmc+" />
+                    <img id="insta__middle__contents__menus__comment" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNjcuNDI5IDY3LjQyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjcuNDI5IDY3LjQyOTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTMzLjQ2OCw2Ny4xODRDMTUuMDE0LDY3LjE4NCwwLDUyLjE3LDAsMzMuNzE1UzE1LjAxNCwwLjI0NiwzMy40NjgsMC4yNDZjMTguNDU1LDAsMzMuNDY5LDE1LjAxNCwzMy40NjksMzMuNDY5DQoJCWMwLDUuNjIxLTEuNDIxLDExLjE2MS00LjExNiwxNi4wNzZsNC42MDgsMTcuMkw1MC41OCw2Mi40NzVDNDUuNDA4LDY1LjU1OSwzOS41MTEsNjcuMTg0LDMzLjQ2OCw2Ny4xODR6IE0zMy40NjgsNC4yNDYNCgkJQzE3LjIxOSw0LjI0Niw0LDE3LjQ2Niw0LDMzLjcxNXMxMy4yMTksMjkuNDY5LDI5LjQ2OCwyOS40NjljNS41ODIsMCwxMS4wMjEtMS41NzQsMTUuNzI5LTQuNTU0bDAuNzQtMC40NjhsMTEuODM1LDMuMTcxDQoJCWwtMy4yNDMtMTIuMWwwLjQxOS0wLjcyYzIuNjA5LTQuNDg0LDMuOTg4LTkuNjAyLDMuOTg4LTE0Ljc5OUM2Mi45MzYsMTcuNDY2LDQ5LjcxNyw0LjI0NiwzMy40NjgsNC4yNDZ6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+                    <img id="insta__middle__contents__menus__addstory" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNTA3LjYwOCw0LjM5NWMtNC4yNDMtNC4yNDQtMTAuNjA5LTUuNTQ5LTE2LjE3Ny0zLjMyMUw5LjQzLDE5My44NzJjLTUuNTE1LDIuMjA2LTkuMjA4LDcuNDU4LTkuNDIsMTMuMzk1DQoJCQljLTAuMjExLDUuOTM2LDMuMTAxLDExLjQzNyw4LjQ0NSwxNC4wMjlsMTkwLjA2OCw5Mi4xODFsOTIuMTgyLDE5MC4wNjhjMi41MTQsNS4xODQsNy43NjQsOC40NTUsMTMuNDkzLDguNDU1DQoJCQljMC4xNzgsMCwwLjM1Ny0wLjAwMywwLjUzNi0wLjAxYzUuOTM1LTAuMjExLDExLjE4OS0zLjkwNCwxMy4zOTQtOS40MTlsMTkyLjgtNDgxLjk5OA0KCQkJQzUxMy4xNTYsMTUuMDAxLDUxMS44NTEsOC42MzgsNTA3LjYwOCw0LjM5NXogTTUyLjA5NCwyMDkuMTE4TDQzNC43Miw1Ni4wNjlMMjA2LjY5MSwyODQuMDk2TDUyLjA5NCwyMDkuMTE4eiBNMzAyLjg4Myw0NTkuOTA3DQoJCQlsLTc0Ljk3OS0xNTQuNTk5bDIyOC4wMy0yMjguMDI3TDMwMi44ODMsNDU5LjkwN3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+                    <img id="insta__middle__contents__menus__bookmark" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjQzMS45NzJweCIgaGVpZ2h0PSI0MzEuOTcycHgiIHZpZXdCb3g9IjAgMCA0MzEuOTcyIDQzMS45NzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQzMS45NzIgNDMxLjk3MjsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTM5My4xNDYsMTQuMjc5Yy0zLjcxMy01LjMzMy04LjcxMy05LjIzMy0xNC45ODktMTEuNzA3Yy0zLjk5Ny0xLjcxMS04LjE4Ni0yLjU2OC0xMi41NjUtMi41NjhWMEg2Ni4zNzgNCgkJYy00LjM3NywwLTguNTYyLDAuODU3LTEyLjU2LDIuNTY4Yy02LjI4LDIuNDcyLTExLjI3OCw2LjM3Ny0xNC45ODksMTEuNzA3Yy0zLjcxLDUuMzMtNS41NjgsMTEuMjI4LTUuNTY4LDE3LjcwMXYzNjguMDE5DQoJCWMwLDYuNDc1LDEuODU4LDEyLjM3MSw1LjU2OCwxNy43MDZjMy43MTEsNS4zMjksOC43MDksOS4yMzMsMTQuOTg5LDExLjcwNGMzLjk5NCwxLjcxMSw4LjE4MywyLjU2NiwxMi41NiwyLjU2Ng0KCQljOC45NDksMCwxNi44NDQtMy4xNDIsMjMuNjk4LTkuNDE4bDEyNS45MS0xMjEuMDYybDEyNS45MSwxMjEuMDY1YzYuNjYzLDYuMDgxLDE0LjU2Miw5LjEyNywyMy42OTUsOS4xMjcNCgkJYzQuNzYsMCw4Ljk0OC0wLjc1NiwxMi41NjUtMi4yNzljNi4yNzYtMi40NzEsMTEuMjc2LTYuMzc1LDE0Ljk4OS0xMS43MTFjMy43MS01LjMyOCw1LjU2NC0xMS4yMjUsNS41NjQtMTcuNjk5VjMxLjk4DQoJCUMzOTguNzEsMjUuNTA3LDM5Ni44NTIsMTkuNjA5LDM5My4xNDYsMTQuMjc5eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+                </div>
+                <div id="insta__middle__contents__likes">
+                    <img src="insta_profile.jpg" alt="">
+                    <span><b>hongs__0430</b> 님이 종아합니다</span>
+                </div>
+                <div id="insta__middle__contents__maintxt">
+                    <span><b>hongs__0430</b> 아깽이 홍사랑</span>
+                </div>
+                <div id="insta__middle__contents__comment">
+                    <p>댓글 4개 모두 보기</p>
+                    <span><b>hongs__0430</b> 와 진짜 너무 귀엽다 SO CUTE ~</span>
+                    <img src="data:image/svg+xml;base64,PHN2ZyBpZD0iY29sb3IiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xMS40NjYgMjIuNzc2Yy4xNDEuMTQ0LjMzMy4yMjQuNTM0LjIyNHMuMzkzLS4wOC41MzQtLjIyNGw5LjU5NC05LjcyMWM0LjAwMS00LjA1MyAxLjE1OC0xMS4wNTUtNC41MzItMTEuMDU1LTMuNDE3IDAtNC45ODUgMi41MTEtNS41OTYgMi45OC0uNjE0LS40NzEtMi4xNzItMi45OC01LjU5Ni0yLjk4LTUuNjcyIDAtOC41NSA2Ljk4NC00LjUzMSAxMS4wNTV6IiBmaWxsPSIjZjQ0MzM2Ii8+PC9zdmc+" />
+                </div>
+                <p id="insta__middle__contents__day">6월 2일</p>
+            </div>
+        </div>
+        <div id="insta__bottom">
+            <img src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTI1NiAwLTI1NiAxOTIuMjY2djMxOS43MzRoMTkwLjY2N3YtMjEwaDEzMC42NjZ2MjEwaDE5MC42Njd2LTMxOS43MzR6Ii8+PC9nPjwvc3ZnPg==" />
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDcuMDU0IDQ3LjA1NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDcuMDU0IDQ3LjA1NDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAxMDAwMjsiIGQ9Ik00Ni42MTQsNDQuMTQ2bC0xMi4xODktMTIuMTljMi43MTgtMy4zMzcsNC4zNTQtNy41ODksNC4zNTQtMTIuMjE5DQoJCWMwLTEwLjY5Mi04LjY5Ny0xOS4zOS0xOS4zODktMTkuMzlTMCw5LjA0NCwwLDE5LjczN2MwLDEwLjY5MSw4LjY5OCwxOS4zODksMTkuMzksMTkuMzg5YzQuOTgyLDAsOS41MTgtMS45MDYsMTIuOTU3LTUuMDA2DQoJCWwxMi4xNDYsMTIuMTQ3YzAuMjkzLDAuMjkzLDAuNjc4LDAuNDM5LDEuMDYxLDAuNDM5YzAuMzg1LDAsMC43NjgtMC4xNDYsMS4wNjEtMC40MzlDNDcuMiw0NS42ODIsNDcuMiw0NC43MzEsNDYuNjE0LDQ0LjE0NnoNCgkJIE0xLjk5OSwxOS43MzZjMC05LjU4OSw3LjgwMS0xNy4zOSwxNy4zOS0xNy4zOWM5LjU4OCwwLDE3LjM4OSw3LjgwMSwxNy4zODksMTcuMzljMCw0LjU5OS0xLjgwOSw4Ljc3NS00LjczNCwxMS44ODkNCgkJYy0wLjAxNCwwLjAxMi0wLjAyOSwwLjAxNi0wLjA0MywwLjAyOGMtMC4wMiwwLjAyMS0wLjAyNiwwLjA0OC0wLjA0NSwwLjA2OGMtMy4xNjksMy4zMjEtNy42MjUsNS40MDMtMTIuNTY2LDUuNDAzDQoJCUM5LjgsMzcuMTI1LDEuOTk5LDI5LjMyNCwxLjk5OSwxOS43MzZ6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDIwOS42NzMgMjA5LjY3MyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjA5LjY3MyAyMDkuNjczOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBkPSJNMTczLjA3NSwyOS4yMDNIMzYuNTk5QzE2LjQxOCwyOS4yMDMsMCw0NS42MjYsMCw2NS44MTJ2NzguMDVjMCwyMC4xODYsMTYuNDE4LDM2LjYwOCwzNi41OTksMzYuNjA4aDEzNi40NzcNCgkJYzIwLjE4LDAsMzYuNTk4LTE2LjQyMiwzNi41OTgtMzYuNjA4di03OC4wNUMyMDkuNjczLDQ1LjYyNiwxOTMuMjU1LDI5LjIwMywxNzMuMDc1LDI5LjIwM3ogTTE5NC42NzMsMTQzLjg2MQ0KCQljMCwxMS45MTUtOS42ODksMjEuNjA4LTIxLjU5OCwyMS42MDhIMzYuNTk5Yy0xMS45MSwwLTIxLjU5OS05LjY5My0yMS41OTktMjEuNjA4di03OC4wNWMwLTExLjkxNSw5LjY4OS0yMS42MDgsMjEuNTk5LTIxLjYwOA0KCQloMTM2LjQ3N2MxMS45MDksMCwyMS41OTgsOS42OTMsMjEuNTk4LDIxLjYwOFYxNDMuODYxeiIvPg0KCTxwYXRoIGQ9Ik0xNDUuMDk1LDk4LjU3TDg5LjQ5OSw2MS45MmMtMi4zMDMtMS41MTktNS4yNTQtMS42NDktNy42ODQtMC4zNDJjLTIuNDI5LDEuMzA4LTMuOTQ0LDMuODQ1LTMuOTQ0LDYuNjA0djczLjMwOQ0KCQljMCwyLjc1OSwxLjUxNSw1LjI5NSwzLjk0NCw2LjYwNGMxLjExMywwLjYsMi4zMzYsMC44OTYsMy41NTUsMC44OTZjMS40NDIsMCwyLjg4MS0wLjQxNSw0LjEyOS0xLjIzOWw1NS41OTYtMzYuNjU5DQoJCWMyLjEwNS0xLjM4OCwzLjM3Mi0zLjc0LDMuMzcyLTYuMjYyQzE0OC40NjcsMTAyLjMxLDE0Ny4yLDk5Ljk1OCwxNDUuMDk1LDk4LjU3eiBNOTIuODcxLDEyNy41NjJWODIuMTA5bDM0LjQ3MSwyMi43MjMNCgkJTDkyLjg3MSwxMjcuNTYyeiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDgzLjEgNDgzLjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ4My4xIDQ4My4xOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBkPSJNNDM0LjU1LDQxOC43bC0yNy44LTMxMy4zYy0wLjUtNi4yLTUuNy0xMC45LTEyLTEwLjloLTU4LjZjLTAuMS01Mi4xLTQyLjUtOTQuNS05NC42LTk0LjVzLTk0LjUsNDIuNC05NC42LDk0LjVoLTU4LjYNCgkJYy02LjIsMC0xMS40LDQuNy0xMiwxMC45bC0yNy44LDMxMy4zYzAsMC40LDAsMC43LDAsMS4xYzAsMzQuOSwzMi4xLDYzLjMsNzEuNSw2My4zaDI0M2MzOS40LDAsNzEuNS0yOC40LDcxLjUtNjMuMw0KCQlDNDM0LjU1LDQxOS40LDQzNC41NSw0MTkuMSw0MzQuNTUsNDE4Ljd6IE0yNDEuNTUsMjRjMzguOSwwLDcwLjUsMzEuNiw3MC42LDcwLjVoLTE0MS4yQzE3MS4wNSw1NS42LDIwMi42NSwyNCwyNDEuNTUsMjR6DQoJCSBNMzYzLjA1LDQ1OWgtMjQzYy0yNiwwLTQ3LjItMTcuMy00Ny41LTM4LjhsMjYuOC0zMDEuN2g0Ny42djQyLjFjMCw2LjYsNS40LDEyLDEyLDEyczEyLTUuNCwxMi0xMnYtNDIuMWgxNDEuMnY0Mi4xDQoJCWMwLDYuNiw1LjQsMTIsMTIsMTJzMTItNS40LDEyLTEydi00Mi4xaDQ3LjZsMjYuOCwzMDEuOEM0MTAuMjUsNDQxLjcsMzg5LjA1LDQ1OSwzNjMuMDUsNDU5eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+            <img id="insta__bottom__user" src="insta_profile.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

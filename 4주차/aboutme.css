@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'KoreanFrenchTypewriter';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/KoreanFrenchTypewriter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#center{
+    display: flex;
+    height: 800px;
+}
+
+#center-img{
+    margin-left: 300px;
+    margin-top: 100px;
+    height: 560px;
+    width: 440px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 249, 245);
+    border: 2px solid rgba(48, 43, 36, 0.336);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+#center-img img{
+    width: 400px;
+    height: 400px;
+    margin: 40px 20px 20px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#center-img span{
+    font-size: 40px;
+    font-family: 'KoreanFrenchTypewriter';
+    margin-bottom: 40px;
+}
+
+#center-content{
+    margin-left: 50px;
+    margin-top: 200px;
+}
+
+#aboutme-bold{
+    font-size: 80px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+#aboutme-content{
+    font-size: 40px;
+}

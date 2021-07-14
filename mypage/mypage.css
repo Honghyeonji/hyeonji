@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'KoreanFrenchTypewriter';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/KoreanFrenchTypewriter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'KoreanFrenchTypewriter';
+}
+
+#center{display: flex; height: 1000px;}
+
+#center a{
+    margin: 100px;
+    height: 560px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 249, 245);
+    border: 2px solid rgba(48, 43, 36, 0.336);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+#center a:nth-child(1){margin-left: 300px;}
+
+#center a:nth-child(2){margin-left: 230px; margin-top: 270px;}
+
+#center a:nth-child(3){margin-left: 150px; margin-top: 120px;}
+
+#center a img{
+    width: 400px;
+    height: 400px;
+    margin: 40px 20px 20px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/* #center button img:hover{
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(100%); 
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(100%); 
+    -o-transition: .5s ease-in-out;
+} */
+
+#center a span{
+    font-size: 40px;
+    font-family: 'KoreanFrenchTypewriter';
+    margin-bottom: 40px;
+}

@@ -1,0 +1,55 @@
+#center{
+    height: 3000px;
+}
+
+#center div img{
+    width: 400px;
+    height: 400px;
+    margin: 40px 20px 20px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#center div{
+    width: 420px;
+    margin: 100px;
+    height: 560px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 249, 245);
+    border: 2px solid rgba(48, 43, 36, 0.336);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.sa{
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.sa{
+    transform: translate(0, 100px);
+    position: absolute;
+}
+.sa-up1{left: 150px;}
+.sa-up2{left: 700px; top:350px;}
+.sa-up3{left: 1250px; top:250px;}
+.sa-up4{left: 1850px; top:300px;}
+.sa-up5{left: 110px; top:800px;}
+.sa-up6{left: 750px; top:1050px;}
+.sa-up7{left: 1330px; top:1080px;}
+.sa-up8{left: 1800px; top:960px;}
+.sa-up9{left: 190px; top:1480px;}
+.sa-up10{left: 700px; top:1650px;}
+.sa-up11{left: 1280px; top:1750px;}
+.sa-up12{left: 1890px; top:1600px}
+
+.sa.show{
+    opacity: 1;
+    transform: none;
+}
+
+#center div span{
+    font-size: 40px;
+    font-family: 'KoreanFrenchTypewriter';
+    margin-bottom: 40px;
+}

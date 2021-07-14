@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/165cf95758.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="HandF.css">
+    <link rel="stylesheet" href="music.css">
+    <title>Music</title>
+</head>
+<body>
+    <header>
+        <a id="icon" href="mypage.html">홍현지</a>
+        <a href="mypage.html" class="header-menu_basic">Home</a>
+        <a href="aboutme.html" class="header-menu_basic">About Me</a>
+        <a href="photo.html" class="header-menu_basic">Photo</a>
+        <div id="header-menu2">
+            <button id="header-menu2__dropbtn">Like</button>
+            <div id="menu2__list">
+                <a href="music.html">음악</a>
+                <a href="#">드라마</a>
+                <a href="#">영화</a>
+            </div>
+        </div>
+    </header>
+    <div class="space"></div>
+    <div class="music__center">
+        <div class="music__center__slide">
+            <div class="music__center__slide__imgs">
+                <ul>
+                    <li>
+                        <img src="hello.jpg" alt="">
+                        <span>JOY - 안녕</span>
+                        <audio src="JOY_hello.mp3" controls loop></audio>
+                    </li>
+                    <li>
+                        <img src="lilac.jpg" alt="">
+                        <span>IU - LILAC</span>
+                        <audio src="IU_lilac.mp3" controls loop></audio>
+                    </li>
+                    <li>
+                        <img src="pet.jpg" alt="">
+                        <span>10CM - PET</span>
+                        <audio src="10cm_pet.mp3" controls loop></audio>
+                    </li>
+                    <li>
+                        <img src="deoksugung.jpg" alt="">
+                        <span>윤아 - 덕수궁 돌담길의 봄</span>
+                        <audio src="Yoona_Deoksugung.mp3" controls loop></audio>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="prev"><i class="fas fa-chevron-left"></i></buttom>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="space"></div>
+    <script>
+        let curPos = 0;
+        let postion = 0;
+        const IMAGE_WIDTH = 500;
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
+        const images = document.querySelector(".music__center__slide__imgs");
+
+        function prev(){
+            if(curPos > 0){
+                nextBtn.removeAttribute("disabled");
+                postion += IMAGE_WIDTH;
+                images.style.transform = `translateX(${postion}px)`;
+                curPos = curPos - 1;
+            };
+            if(curPos == 0){
+                prevBtn.setAttribute('disabled', 'true');
+            };
+        };
+        function next(){
+            if(curPos < 3){
+                prevBtn.removeAttribute("disabled");
+                postion -= IMAGE_WIDTH;
+                images.style.transform = `translateX(${postion}px)`;
+                curPos = curPos + 1;
+            }
+            if(curPos == 3){
+                nextBtn.setAttribute('disabled', 'true');
+            };
+        };
+
+        function init(){
+            prevBtn.setAttribute('disabled', 'true');
+            prevBtn.addEventListener("click", prev);
+            nextBtn.addEventListener("click", next);
+        };
+
+        init();
+    </script>
+    <footer>
+        <img src="wink_mark.png" alt="">
+        <div>
+            <p>홍현지<br>
+                Wink, hmj2292@kookmin.ac.kr
+            </p>
+        </div> 
+    </footer>
+</body>
+</html>
